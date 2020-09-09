@@ -1,8 +1,10 @@
 # Maximum subarray in dynamic programming
 
+https://github.com/xflywind/hacking-to-the-algorithm
+
 Dynamic programming is a computer programming optimization method. Every new decision is based on previous efforts. So this method is pretty efficient.
 
-## Description
+## Problem Description
 
 Given that an array with sixteen elements, you need to find the consecutive elements with the max summation among the array.
 
