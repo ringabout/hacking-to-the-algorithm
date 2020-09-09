@@ -50,4 +50,29 @@ So maximum subarray is composed of the previous maximum subarray plus the curren
 
 ![e3](../assets/1/e3.png)
 
+Final solutions
 
+```nim
+proc findMaxValue*(arr: openArray[int]): int =
+  ## Returns
+  if arr.len > 0:
+    var store = newSeq[int](arr.len)
+    store[0] = arr[0]
+    result = arr[0]
+
+    for idx in 1 ..< arr.len:
+      store[idx] = store[idx - 1] + arr[idx]
+
+      # can't get gains
+      if store[idx] < 0:
+        store[idx] = 0
+
+      # store the max value
+      if store[idx] > result:
+        result = store[idx]
+
+
+let data = [13, -3, -25, 20, -3, -16, -23, 18, 20, -7, 12, -5, -22, 15, -4, 7]
+echo findMaxValue(data) 
+# Output: 43
+```
