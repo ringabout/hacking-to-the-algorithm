@@ -9,4 +9,4 @@ for i in 0 ..< data.len:
     if value > maxElem:
       maxElem = value
 
-echo maxElem
+doAssert maxElem == 43

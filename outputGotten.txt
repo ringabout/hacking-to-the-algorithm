@@ -1,0 +1,2 @@
+megatest:processing: tests\c1\t_1.nim
+megatest:processing: tests\c1\t_simple.nim
